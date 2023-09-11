@@ -1,0 +1,47 @@
+1). Display top 10 rows the dataset.
+ans-  import pandas as pd
+      mydf=pd.read_csv('/content/Ecommerce Purchases (2)')
+      mydf.head(11)
+
+2). Check last 10 Rows of the dataset.
+Ans- import pandas as pd
+     mydf=pd.read_csv('/content/Ecommerce Purchases (2)')
+     mydf.tail()
+
+3). Check datatype of each column.
+ans- mydf.info()
+
+
+4). Check null values in the dataset.
+ans- import pandas as pd
+     mydf=pd.read_csv('/content/Ecommerce Purchases (2)')
+     null_values=mydf.isnull().sum()
+     print(null_values)
+or 
+    import pandas as pd
+    salesdf=pd.read_csv('/content/Ecommerce Purchases (2)')
+    salesdf.isnull()
+
+5). How many Rows and columns all in dataset.
+ans- salesdf.columns
+
+6). Highest and lowest purches prices [max and min].
+
+
+7). How many people have french 'fr' as their language.
+ans- salesdf[salesdf['Language']=='fr']       
+      or    
+len(salesdf[salesdf['Language']=='fr'])   #len total no. check krne ke liye use krte h. eg-kitne log h jo 'fr' languafe bolte h 
+
+8). Job title contains engineer.
+ans- salesdf['Job']=='engineer'
+
+9). Find email of the person with the following IP address.
+ans- chotu=salesdf[salesdf['IP Address']=='132.207.160.22']
+     print(chotu)
+
+10). How many people have master and as their credit card provider and made a purchase about 50?
+ans- salesdf[salesdf['CC Provider']=='Mastercard']
+	
+11). Find Email of the person with the following CC number 4664825258997302.
+12). How many people purchase during the AM and how many people purchase during PM.
